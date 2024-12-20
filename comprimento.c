@@ -3,9 +3,6 @@
 #include <string.h> // biblioteca utilizada para manipulação de strings.
 
 void menu(){ // função void que retorna vazio
-    int ler_menu;
-    do{
-
         printf("---------MENU Conversor---------\n");
         printf("1 - Converter centrimetros para metros\n");
         printf("2 - Converter metros para centimetros\n");
@@ -13,28 +10,32 @@ void menu(){ // função void que retorna vazio
         printf("4 - Sair\n");
     
         printf("Informe uma opcao:\n");
-        scanf("%d", &ler_menu);
+}
+int main(){ // função main resposável por executar o programa.    
+    int ler_menu;
+    char opcao[4];
 
+    do{
+        menu();
+        scanf("%d",&ler_menu);
+        
+        while (getchar() != '\n');
 
         switch(ler_menu){
-            char opcao;
-            case 1:
-            // operacao
+        case 1:
+            printf("deseja retornar ao menu? [Sim] / [Nao]\n");
+            fgets(opcao , 4 , stdin);
 
-            printf("Deseja retornar ao menu? [Sim] ou [Nao]\n");
-            scanf("%c",&opcao);
+            opcao[strcspn(opcao, "\n")] = 0;
 
-            if(opcao = "Sim"){
-                printf("teste");
+            if(strcmp(opcao, "Sim")== 0 || strcmp(opcao , "sim") == 0){
+
+            }else if(strcmp(opcao, "Nao")== 0 || strcmp(opcao , "nao") == 0){
+                ler_menu = 4;
             }
             break;
+
         }
-    }while(ler_menu >=1 && ler_menu <= 4);
-
-}
-
-int main(){ // função main resposável por executar o programa.    
-
-    menu();
+    }while(ler_menu >=1 && ler_menu <= 3);
 }
 
