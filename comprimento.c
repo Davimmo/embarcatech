@@ -1,4 +1,4 @@
-#include <stdio.h> //  biblioteca para ler inputs e outputs
+#include <stdio.h> //  biblioteca para ler inputs e outputs.
 #include <stdlib.h> // biblioteca para usar alguns comando especificos como por exemplo na implementação do código os System("cls").
 #include <string.h> // biblioteca utilizada para manipulação de strings.
 
