@@ -28,6 +28,21 @@ float calc_metros() { // Função que calcula metros para centímetros
     return metro;
 }
 
+float calc_centimetros() { // Função que calcula centímetros para metros
+    float centimetro = 0.0;
+
+    printf("Informe a quantidade em centimetros:\n");
+    scanf("%f", &centimetro);
+
+    if (centimetro > 0) {
+        centimetro /= 100;
+        printf("A conversao de centimetros para metros e de: %.2fm\n", centimetro);
+    } else {
+        printf("Opcao invalida!!\n");
+    }
+
+    return centimetro;
+}
 int main(){ // função main resposável por executar o programa.    
     int ler_menu;
     char opcao[4];
