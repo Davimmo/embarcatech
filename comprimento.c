@@ -11,31 +11,50 @@ void menu(){ // função void que retorna vazio
     
         printf("Informe uma opcao:\n");
 }
+
+float calc_metros() { // Função que calcula metros para centímetros
+    float metro = 0.0;
+
+    printf("Informe a quantidade em metros:\n");
+    scanf("%f", &metro);
+
+    if (metro > 0) {
+        metro *= 100;
+        printf("A conversao de metros para centimetro e de: %2.fcm\n", metro);
+    } else {
+        printf("Opcao invalida!!\n");
+    }
+
+    return metro;
+}
+
 int main(){ // função main resposável por executar o programa.    
     int ler_menu;
     char opcao[4];
 
     do{
+    system("cls");
         menu();
         scanf("%d",&ler_menu);
         
         while (getchar() != '\n');
 
         switch(ler_menu){
+        
         case 1:
+            
             printf("deseja retornar ao menu? [Sim] / [Nao]\n");
             fgets(opcao , 4 , stdin);
 
             opcao[strcspn(opcao, "\n")] = 0;
 
-            if(strcmp(opcao, "Sim")== 0 || strcmp(opcao , "sim") == 0){
+            if(strcmp(opcao, "Sim") == 0 || strcmp(opcao , "sim") == 0){
 
-            }else if(strcmp(opcao, "Nao")== 0 || strcmp(opcao , "nao") == 0){
-                ler_menu = 4;
+            }else if(strcmp(opcao, "Nao") == 0 || strcmp(opcao , "nao") == 0){
+            ler_menu = 4;
             }
-            break;
-
+        break;
         }
-    }while(ler_menu >=1 && ler_menu <= 3);
+    }while(ler_menu >=1 && ler_menu <= 4);
 }
 
