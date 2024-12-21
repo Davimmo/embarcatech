@@ -59,7 +59,21 @@ float calc_milimetro() { // Função que calcula milímetros para metros
 
     return milimetro;
 }
+float calc_metro_mili() { // Função que calcula metros para milímetros
+    float metro_milimetro = 0.0;
 
+    printf("Informe a quantidade em metros:\n");
+    scanf("%f", &metro_milimetro);
+
+    if (metro_milimetro > 0) {
+        metro_milimetro *= 1000;
+        printf("O valor em milimetro e: %4.fmm\n", metro_milimetro);
+    } else {   
+        printf("Opcao invalida!!\n");
+    }
+
+    return metro_milimetro;
+}
 int main(){ // função main resposável por executar o programa.    
     int ler_menu;
     char opcao[4];
