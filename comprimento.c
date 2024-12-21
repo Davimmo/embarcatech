@@ -3,12 +3,13 @@
 #include <string.h> // biblioteca utilizada para manipulação de strings.
 
 void menu(){ // função void que retorna vazio
-        printf("---------MENU Conversor---------\n");
-        printf("1 - Converter centrimetros para metros\n");
-        printf("2 - Converter metros para centimetros\n");
-        printf("3 - Converter milimetros para metros\n");
-        printf("4 - Sair\n");
-    
+        printf("|-----------MENU Conversor-------------|\n");
+        printf("|1 - Converter metros para centimetros |\n");
+        printf("|2 - Converter centimetros para metros |\n");
+        printf("|3 - Converter milimetros para metros  |\n");
+        printf("|4 - Converter metros para milimetros  |\n");
+        printf("|5 - Sair                              |\n");
+
         printf("Informe uma opcao:\n");
 }
 
@@ -18,7 +19,7 @@ float calc_metros() { // Função que calcula metros para centímetros
     printf("Informe a quantidade em metros:\n");
     scanf("%f", &metro);
 
-    if (metro > 0) {
+    if (metro > 0) { // verifica se o numero que foi informado é maior que zero. Usei para não aceitar numeros negativos
         metro *= 100;
         printf("A conversao de metros para centimetro e de: %2.fcm\n", metro);
     } else {
@@ -34,7 +35,7 @@ float calc_centimetros() { // Função que calcula centímetros para metros
     printf("Informe a quantidade em centimetros:\n");
     scanf("%f", &centimetro);
 
-    if (centimetro > 0) {
+    if (centimetro > 0) { // verifica se o numero que foi informado é maior que zero. Usei para não aceitar numeros negativos
         centimetro /= 100;
         printf("A conversao de centimetros para metros e de: %.2fm\n", centimetro);
     } else {
@@ -50,7 +51,7 @@ float calc_milimetro() { // Função que calcula milímetros para metros
     printf("Informe a quantidade de metros:\n");
     scanf("%f", &milimetro);
 
-    if (milimetro > 0) {
+    if (milimetro > 0) { // verifica se o numero que foi informado é maior que zero. Usei para não aceitar numeros negativos
         milimetro /= 1000;
         printf("O valor em milimetro e: %.2fm\n", milimetro);
     } else {
@@ -65,7 +66,7 @@ float calc_metro_mili() { // Função que calcula metros para milímetros
     printf("Informe a quantidade em metros:\n");
     scanf("%f", &metro_milimetro);
 
-    if (metro_milimetro > 0) {
+    if (metro_milimetro > 0) { // verifica se o numero que foi informado é maior que zero. Usei para não aceitar numeros negativos
         metro_milimetro *= 1000;
         printf("O valor em milimetro e: %4.fmm\n", metro_milimetro);
     } else {   
@@ -74,33 +75,62 @@ float calc_metro_mili() { // Função que calcula metros para milímetros
 
     return metro_milimetro;
 }
-int main(){ // função main resposável por executar o programa.    
+
+int main() {
     int ler_menu;
     char opcao[4];
 
-    do{
-    system("cls");
+    do {
         menu();
-        scanf("%d",&ler_menu);
-        
-        while (getchar() != '\n');
+        scanf("%d", &ler_menu);
+        while (getchar() != '\n'); // Limpa o buffer de entrada
+        system("cls");
+        switch (ler_menu) {
+            case 1:
+                calc_metros(); // calcula a função calc_metros
+            break;
 
-        switch(ler_menu){
-        
-        case 1:
+            case 2:
+                calc_centimetros();// calcula a função calc_centimetros
+            break;
+
+            case 3:
+                calc_milimetro();// calcula a função calc_milimetro
+            break;
+
+            case 4:
+                calc_metro_mili();// calcula a função calc_metro_mili
+            break;
             
-            printf("deseja retornar ao menu? [Sim] / [Nao]\n");
-            fgets(opcao , 4 , stdin);
+            case 5:
+                printf("Programa encerrado!"); // encerra o programa
+            break;
 
-            opcao[strcspn(opcao, "\n")] = 0;
-
-            if(strcmp(opcao, "Sim") == 0 || strcmp(opcao , "sim") == 0){
-
-            }else if(strcmp(opcao, "Nao") == 0 || strcmp(opcao , "nao") == 0){
-            ler_menu = 4;
-            }
-        break;
+            default:
+                printf("Opcao invalida.\n");
+            break;
         }
-    }while(ler_menu >=1 && ler_menu <= 4);
+
+        
+        if (ler_menu != 5) {
+            
+            printf("Deseja retornar ao menu? [Sim] / [Nao]\n"); // Perguntar ao usuário se deseja retornar ao menu
+            scanf("%s", opcao);
+            
+            while (getchar() != '\n'); // Limpa o buffer de entrada
+            
+            system("cls");
+
+            if (strcmp(opcao, "Nao") == 0 || strcmp(opcao, "nao") == 0) {
+                ler_menu = 5; 
+            system("cls");
+                printf("Programa encerrado!");
+            }
+        }
+        
+    } while (ler_menu >= 1 && ler_menu <= 4);
+
+    return 0;
 }
+
 
