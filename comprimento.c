@@ -85,6 +85,16 @@ int main(){
     do {
         menu();
         scanf("%d", &ler_menu);
+        
+        while (getchar() != '\n'); // Limpa o buffer de entrada
+        system("cls");
+
+        printf("Deseja entrar no programa? [Sim] / [Não]");
+        scanf("%s",opcao);
+
+
+
+
 } while (ler_menu >= 1 && ler_menu <= 4);
 
 }
