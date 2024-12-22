@@ -44,3 +44,19 @@ float calc_centimetros() { // Função que calcula centímetros para metros
 
     return centimetro;
 }
+
+float calc_milimetro() { // Função que calcula milímetros para metros
+    float milimetro = 0.0;
+
+    printf("Informe a quantidade de metros:\n");
+    scanf("%f", &milimetro);
+
+    if (milimetro > 0) { // verifica se o numero que foi informado é maior que zero. Usei para não aceitar numeros negativos
+        milimetro /= 1000;
+        printf("O valor em milimetro e: %.2fm\n", milimetro);
+    } else {
+        printf("Opcao invalida!!\n");
+    }
+
+    return milimetro;
+}
