@@ -12,3 +12,19 @@ void menu(){ // função void que retorna vazio
 
         printf("Informe uma opcao:\n");
 }
+
+float calc_metros() { // Função que calcula metros para centímetros
+    float metro = 0.0;
+
+    printf("Informe a quantidade em metros:\n");
+    scanf("%f", &metro);
+
+    if (metro > 0) { // verifica se o numero que foi informado é maior que zero. Usei para não aceitar numeros negativos
+        metro *= 100;
+        printf("A conversao de metros para centimetro e de: %2.fcm\n", metro);
+    } else {
+        printf("Opcao invalida!!\n");
+    }
+
+    return metro;
+}
