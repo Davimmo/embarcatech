@@ -78,5 +78,13 @@ float calc_metro_mili() { // Função que calcula metros para milímetros
 }
 
 int main(){
-        
+
+   int ler_menu;
+   char opcao[4];
+
+    do {
+        menu();
+        scanf("%d", &ler_menu);
+} while (ler_menu >= 1 && ler_menu <= 4);
+
 }
