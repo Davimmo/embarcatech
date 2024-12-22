@@ -80,7 +80,7 @@ float calc_metro_mili() { // Função que calcula metros para milímetros
 int main(){
 
    int ler_menu;
-   //char opcao[4];
+   char opcao[4];
 
     do {
         menu();
@@ -112,6 +112,24 @@ int main(){
                 printf("Opcao invalida.\n");
             break;
         }
-} while (ler_menu >= 1 && ler_menu <= 4);
+        if (ler_menu != 5) {
+            
+            printf("Deseja retornar ao menu? [Sim] / [Nao]\n"); // Perguntar ao usuário se deseja retornar ao menu
+            scanf("%s", opcao);
+            
+            while (getchar() != '\n'); // Limpa o buffer de entrada
+            
+            system("cls");
+
+            if (strcmp(opcao, "Nao") == 0 || strcmp(opcao, "nao") == 0) {
+                ler_menu = 5; 
+            system("cls");
+                printf("Programa encerrado!");
+            }
+        }
+        
+    } while (ler_menu >= 1 && ler_menu <= 4);
+
+    return 0;
 
 }
