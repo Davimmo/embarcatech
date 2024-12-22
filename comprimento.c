@@ -21,7 +21,7 @@ float calc_metros() { // Função que calcula metros para centímetros
 
     if (metro > 0) { // verifica se o numero que foi informado é maior que zero. Usei para não aceitar numeros negativos
         metro *= 100;
-        printf("A conversao de metros para centimetros e de: %2.f cm\n", metro);
+        printf("A conversao de metros para centimetro e de: %2.fcm\n", metro);
     } else {
         printf("Opcao invalida!!\n");
     }
@@ -37,7 +37,7 @@ float calc_centimetros() { // Função que calcula centímetros para metros
 
     if (centimetro > 0) { // verifica se o numero que foi informado é maior que zero. Usei para não aceitar numeros negativos
         centimetro /= 100;
-        printf("A conversao de centimetros para metros e de: %.2f m\n", centimetro);
+        printf("A conversao de centimetros para metros e de: %.2fm\n", centimetro);
     } else {
         printf("Opcao invalida!!\n");
     }
@@ -53,14 +53,13 @@ float calc_milimetro() { // Função que calcula milímetros para metros
 
     if (milimetro > 0) { // verifica se o numero que foi informado é maior que zero. Usei para não aceitar numeros negativos
         milimetro /= 1000;
-        printf("O valor em milimetros e: %.2f m\n", milimetro);
+        printf("O valor em milimetro e: %.2fm\n", milimetro);
     } else {
         printf("Opcao invalida!!\n");
     }
 
     return milimetro;
 }
-
 float calc_metro_mili() { // Função que calcula metros para milímetros
     float metro_milimetro = 0.0;
 
@@ -69,7 +68,7 @@ float calc_metro_mili() { // Função que calcula metros para milímetros
 
     if (metro_milimetro > 0) { // verifica se o numero que foi informado é maior que zero. Usei para não aceitar numeros negativos
         metro_milimetro *= 1000;
-        printf("O valor em milimetros e: %4.f mm\n", metro_milimetro);
+        printf("O valor em milimetro e: %4.fmm\n", metro_milimetro);
     } else {   
         printf("Opcao invalida!!\n");
     }
@@ -77,10 +76,9 @@ float calc_metro_mili() { // Função que calcula metros para milímetros
     return metro_milimetro;
 }
 
-int main(){
-
-   int ler_menu;
-   char opcao[4];
+int main() {
+    int ler_menu;
+    char opcao[4];
 
     do {
         menu();
@@ -112,6 +110,8 @@ int main(){
                 printf("Opcao invalida.\n");
             break;
         }
+
+        
         if (ler_menu != 5) {
             
             printf("Deseja retornar ao menu? [Sim] / [Nao]\n"); // Perguntar ao usuário se deseja retornar ao menu
@@ -131,5 +131,6 @@ int main(){
     } while (ler_menu >= 1 && ler_menu <= 4);
 
     return 0;
-
 }
+
+/*Desenvolvido por João Vitor Maciel Lima | Projeto EmbarcaTech*/
