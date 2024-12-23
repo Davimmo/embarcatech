@@ -19,7 +19,7 @@ O projeto realiza diversas conversões matemáticas entre unidades de compriment
 Para instalar e executar o programa corretamente, siga estas etapas:
 
 ### Ferramentas Necessárias: 🧰
-1. **Git Bash**: [Como instalar Git Bash](https://forum.casadodesenvolvedor.com.br/topic/44837-como-instalar-o-git-bash-para-mostrar-a-op%C3%A7%C3%A3o-git-bash-here/)
+1. **Git Bash**: [Download Git Bash](https://git-scm.com/downloads)
 2. **Visual Studio Code**: [Download VSCode](https://code.visualstudio.com/)
 3. **GCC Compiler**: [Download GCC](https://sourceforge.net/projects/gcc-win64/)
 4. **Extensões do VSCode**:
