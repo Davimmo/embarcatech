@@ -72,4 +72,6 @@ cd seu-projeto
 # Compilar/Preparar o ambiente (se necessário)
 # Exemplo: make ou npm run build
 
-                    Author: João Vitor Maciel Lima || JVMLDEV 👨🏾‍💻
+					
+
+						Author: João Vitor Maciel Lima || JVMLDEV 👨🏾‍💻
