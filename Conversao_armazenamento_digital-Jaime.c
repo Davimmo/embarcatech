@@ -9,7 +9,7 @@ void conversao_armazenamento(double valor, char origem, char destino) {
     const double MB_EM_GB = 1024;
     const double GB_EM_TB = 1024;
 
-    // Conversão do valorpara bits
+    // Conversão do valor para bits
     double bits;
     switch (origem) {
         case 'b':
@@ -67,15 +67,27 @@ void conversao_armazenamento(double valor, char origem, char destino) {
 int main() {
     double valor;
     char origem, destino;
+    //validação para valores positivos
+    do {
+        printf("Digite o valor a ser convertido: ");
+        scanf("%lf", &valor);
 
-    printf("Digite o valor a ser convertido: ");
-    scanf("%lf", &valor);
+        if (valor < 0) {
+            printf("O valor a ser convertido deve ser positivo!\n");
+        }
+    } while (valor < 0);
 
     printf("Digite a unidade de origem (b = bits, B = bytes, K = kilobytes, M = megabytes, G = gigabytes, T = terabytes): ");
     scanf(" %c", &origem);
+    //verificar se unidades de origem e destino sejam iguais
+    do {
+        printf("Digite a unidade de destino (b = bits, B = bytes, K = kilobytes, M = megabytes, G = gigabytes, T = terabytes): ");
+        scanf(" %c", &destino);
 
-    printf("Digite a unidade de destino (b = bits, B = bytes, K = kilobytes, M = megabytes, G = gigabytes, T = terabytes): ");
-    scanf(" %c", &destino);
+        if (origem == destino) {
+            printf("A unidade de origem e destino não podem ser iguais! Por favor, escolha uma unidade de destino diferente.\n");
+        }
+    } while (origem == destino);
 
     conversao_armazenamento(valor, origem, destino);
 
