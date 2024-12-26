@@ -7,19 +7,19 @@ void ConversaoPotencia( char unidadep, float valorp) {
     
     switch(unidadep) {
     case 'w':
-        printf("A potência �: \n%.2fW \n%.2fkW \n%.2fcv \n%.2fhp\n", valorp, valorp/1000, valorp/735.5, valorp/745.7);
+        printf("A potência é: \n%.2fW \n%.2fkW \n%.2fcv \n%.2fhp\n", valorp, valorp/1000, valorp/735.5, valorp/745.7);
         break;
 
     case 'k':
-        printf("A potência �: \n%.2fkW  \n%.2fW \n%.2fcv \n%.2fhp\n", valorp, valorp*1000, valorp*1000 / 735.5, valorp*1000/745.7);
+        printf("A potência é: \n%.2fkW  \n%.2fW \n%.2fcv \n%.2fhp\n", valorp, valorp*1000, valorp*1000 / 735.5, valorp*1000/745.7);
         break;
 
     case 'c':
-        printf("A potência �: \n%.2fcv \n%.2fW \n%.2fkW \n%.2fhp\n", valorp, valorp* 735.5, valorp* 735.5/1000, valorp*735.5/745.7);
+        printf("A potência é: \n%.2fcv \n%.2fW \n%.2fkW \n%.2fhp\n", valorp, valorp* 735.5, valorp* 735.5/1000, valorp*735.5/745.7);
         break;
 
     case 'h':
-        printf("A potência �: \n%.2fhp \n%.2fW \n%.2fkW, %.2fcv\n", valorp, valorp*745.7, valorp*745.7/1000, valorp*745.7/735.5);
+        printf("A potência é: \n%.2fhp \n%.2fW \n%.2fkW, %.2fcv\n", valorp, valorp*745.7, valorp*745.7/1000, valorp*745.7/735.5);
         break;
 
     default:
