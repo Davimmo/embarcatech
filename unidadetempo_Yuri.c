@@ -58,6 +58,20 @@ int tempo() {
     }
     printf("é: %.2f\n", resultado);
 
+    // Explicação da conversão
+    printf("Dica: Para realizar esta conversão, foi utilizada a seguinte lógica:\n");
+    if (PotF == 1) {
+        printf("- Multiplicação por 60.\n");
+    } else if (PotF == -1) {
+        printf("- Divisão por 60.\n");
+    } else if (PotF == 2) {
+        printf("- Multiplicação por 3600.\n");
+    } else if (PotF == -2) {
+        printf("- Divisão por 3600.\n");
+    } else {
+        printf("- Nenhuma conversão foi necessária.\n");
+    }
+
     return 0;
 }
 
