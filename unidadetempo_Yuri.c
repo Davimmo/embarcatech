@@ -6,15 +6,31 @@ int tempo() {
     float nro;
 
     // Menu de entrada
-    printf("1 - Segundos\n2 - Minutos\n3 - Horas\n");
-    printf("Escreva o número correspondente à unidade de medida original: ");
-    scanf("%i", &var1);
+  printf("1 - Segundos\n2 - Minutos\n3 - Horas\n");
 
-    printf("Escreva o número correspondente à unidade de medida a ser convertido: ");
-    scanf("%i", &var2);
+    do {
+        printf("Escreva o número correspondente à unidade de medida original (1, 2 ou 3): ");
+        scanf("%i", &var1);
+        if (var1 < 1 || var1 > 3) {
+            printf("Erro: Unidade original inválida! Por favor, escolha entre 1 (segundos), 2 (minutos) ou 3 (horas).\n");
+        }
+    } while (var1 < 1 || var1 > 3);
 
-    printf("Escreva o número que deseja converter: ");
-    scanf("%f", &nro);
+    do {
+        printf("Escreva o número correspondente à unidade de medida a ser convertido (1, 2 ou 3): ");
+        scanf("%i", &var2);
+        if (var2 < 1 || var2 > 3) {
+            printf("Erro: Unidade de conversão inválida! Por favor, escolha entre 1 (segundos), 2 (minutos) ou 3 (horas).\n");
+        }
+    } while (var2 < 1 || var2 > 3);
+
+    do {
+        printf("Escreva o número que deseja converter (deve ser positivo): ");
+        scanf("%f", &nro);
+        if (nro < 0) {
+            printf("Erro: O valor a ser convertido não pode ser negativo. Por favor, insira um valor positivo.\n");
+        }
+    } while (nro < 0);
 
     // Define as potências baseadas nas unidades
     if (var1 == 1) // Segundos
