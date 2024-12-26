@@ -7,4 +7,4 @@ Participantes:
 - José Ricardo de Souza Santos
 - Maria Bianca Vitoria Coelho Marinho de Lima
 - Yuri Silva Reis
-- (adicionem o nome de vocês em ordem alfabética)
+- Jaime Neto

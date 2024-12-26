@@ -1,1 +1,0 @@
-Adicionando esse arquivo apenas para testar configurações do git
