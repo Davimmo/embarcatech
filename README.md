@@ -3,7 +3,7 @@ Atividade relacionada ao uso de versionamento de código
 
 Participantes: 
 - Davi Bezerra Cavalcanti
-- Jaime Neto
+- Jaime Fernandes Dos Reis Neto
 - João Vitor Maciel Lima
 - José Ricardo de Souza Santos
 - Maria Bianca Vitoria Coelho Marinho de Lima
